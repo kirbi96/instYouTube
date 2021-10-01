@@ -3,7 +3,7 @@ import {IconSvgLogo} from "../assets/icons/IconSvgLogo";
 import {IconSvgPlus} from "../assets/icons/IconSvgPlus";
 import {IconSvgFavorite} from "../assets/icons/IconSvgFavorite";
 import {IconSvgMessage} from "../assets/icons/IconSvgMessage";
-import {Image, ScrollView, StyleSheet, TouchableOpacity, View} from "react-native";
+import {Dimensions, Image, ScrollView, StyleSheet, TouchableOpacity, View} from "react-native";
 import {AgEnum, Text} from "../components/ui/Text";
 import {Colors} from "../styles/Colors";
 import {TextHelper} from "../helpers/TextHelper";
@@ -17,7 +17,7 @@ export const HomeScreen = () => {
 
     return (
         <>
-            <View style={styles.topContainer}>
+           <View style={styles.topContainer}>
                 <IconSvgLogo/>
                 <View style={styles.topContainerIcons}>
                     <TouchableOpacity style={{marginRight: 20}}>
