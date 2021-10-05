@@ -27,7 +27,7 @@ export const SearchScreen = () => {
                 {[...Array(6)].map((_, index) => (
                     <TouchableOpacity key={index}>
                         <Image style={styles.smallImage}
-                               source={{uri: 'https://yt3.ggpht.com/ytc/AKedOLSpJnXNw11fqOOzQA_866Z5yRKBON_nCjWe5o2L2A=s48-c-k-c0x00ffffff-no-rj'}}/>
+                               source={{uri: 'https://sun9-11.userapi.com/impg/VhbLBeJkOJ1_iitkUn0mdVS59fNk8l1Uj38qUg/UVBcOVQkULU.jpg?size=640x640&quality=96&sign=097b61e3980a162149353467941ffc8b&type=album'}}/>
                     </TouchableOpacity>
                 ))}
             </View>
@@ -35,13 +35,13 @@ export const SearchScreen = () => {
             <View style={styles.flexRow}>
                 <View style={styles.bottomLeft}>
                     <Image style={styles.bigImage}
-                           source={{uri: 'https://yt3.ggpht.com/ytc/AKedOLSpJnXNw11fqOOzQA_866Z5yRKBON_nCjWe5o2L2A=s48-c-k-c0x00ffffff-no-rj'}}/>
+                           source={{uri: 'https://sun9-11.userapi.com/impg/VhbLBeJkOJ1_iitkUn0mdVS59fNk8l1Uj38qUg/UVBcOVQkULU.jpg?size=640x640&quality=96&sign=097b61e3980a162149353467941ffc8b&type=album'}}/>
                 </View>
                 <View style={styles.bottomRight}>
                     {[...Array(2)].map((_, index) => (
                         <TouchableOpacity key={index}>
                             <Image style={styles.smallImage}
-                                   source={{uri: 'https://yt3.ggpht.com/ytc/AKedOLSpJnXNw11fqOOzQA_866Z5yRKBON_nCjWe5o2L2A=s48-c-k-c0x00ffffff-no-rj'}}/>
+                                   source={{uri: 'https://sun9-11.userapi.com/impg/VhbLBeJkOJ1_iitkUn0mdVS59fNk8l1Uj38qUg/UVBcOVQkULU.jpg?size=640x640&quality=96&sign=097b61e3980a162149353467941ffc8b&type=album'}}/>
                         </TouchableOpacity>
                     ))}
                 </View>
@@ -76,8 +76,8 @@ const styles = StyleSheet.create({
         marginLeft: DataHelper.getWidth() * 0.003,
     },
     bigImage:{
-        width: DataHelper.getWidth() * 0.667,
-        height: DataHelper.getWidth() * 0.667,
+        width: DataHelper.getWidth() * 0.663,
+        height: DataHelper.getWidth() * 0.663,
         marginTop: DataHelper.getWidth() * 0.003,
         marginRight: DataHelper.getWidth() * 0.003,
     },
@@ -90,6 +90,8 @@ const styles = StyleSheet.create({
     bottomLeft:{
         width: DataHelper.getWidth() * 0.66,
         height: DataHelper.getWidth() * 0.66,
+        marginRight: DataHelper.getWidth() * 0.003,
+        marginLeft: DataHelper.getWidth() * 0.006,
     },
     bottomRight:{
         flexDirection: "column",
