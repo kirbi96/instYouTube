@@ -1,6 +1,5 @@
-export class TextHelper{
-
-    static getUserHistoryName = (name: string) =>{
-        return name.substr(0, 12)
-    }
+export class TextHelper {
+  static getUserHistoryName = (name: string) => {
+    return name.substr(0, 12);
+  };
 }
