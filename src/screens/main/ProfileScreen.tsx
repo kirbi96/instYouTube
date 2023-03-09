@@ -11,6 +11,8 @@ import {Colors} from '../../styles/Colors';
 import {Button} from '../../components/ui/Button';
 import {DataHelper} from '../../helpers/DataHelper';
 import {launchImageLibrary} from 'react-native-image-picker';
+import {observer} from 'mobx-react';
+import {useRootStore} from '../../base/hooks/useRootStore';
 
 interface IPhoto {
   uri: string;
@@ -19,7 +21,9 @@ interface IPhoto {
 const exAvatar =
   'https://img01.rl0.ru/afisha/e1200x600i/daily.afisha.ru/uploads/images/2/f2/2f23c421db983f28be0a4d9e84fe1d3d.png';
 
-export const ProfileScreen = () => {
+export const ProfileScreen = observer(() => {
+  const {authStore} = useRootStore();
+
   const [photos, setPhotos] = useState<IPhoto[]>([]);
 
   const setPhoto = () => {
@@ -59,6 +63,12 @@ export const ProfileScreen = () => {
           makarov.96
         </Text>
 
+        <TouchableOpacity onPress={() => authStore.logout()}>
+          <Text align={'right'} Ag={AgEnum.SUBTITLE}>
+            Exit
+          </Text>
+        </TouchableOpacity>
+
         <TouchableOpacity
           style={[styles.historyItem, styles.historyItemNotActive]}>
           <Image style={styles.history} source={{uri: exAvatar}} />
@@ -83,7 +93,7 @@ export const ProfileScreen = () => {
       </View>
     </ScrollView>
   );
-};
+});
 
 const styles = StyleSheet.create({
   history: {

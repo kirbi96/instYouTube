@@ -13,7 +13,7 @@ import {AgEnum, Text} from '../../components/ui/Text';
 import {Colors} from '../../styles/Colors';
 import {TextHelper} from '../../helpers/TextHelper';
 import {PostCard} from '../../components/PostCard';
-import {HistoryData} from '../../store/HistoryData';
+import {HistoryData} from '../../modules/history/HistoryData';
 import {HistoryHelper} from '../../helpers/HistoryHelper';
 import {IHistory} from '../../types/HistoryTypes';
 

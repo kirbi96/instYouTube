@@ -5,14 +5,18 @@ import Input from '../../components/ui/Input';
 import {Colors} from '../../styles/Colors';
 import {Button} from '../../components/ui/Button';
 import {useForm} from 'react-hook-form';
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import {observer} from 'mobx-react';
+import {useRootStore} from '../../base/hooks/useRootStore';
+import {LoaderFlex} from '../../components/ui/Loader';
 
 enum EAuthForm {
   USERNAME = 'username',
   PASSWORD = 'password',
 }
 
-export const AuthScreen = () => {
+export const AuthScreen = observer(() => {
+  const {authStore} = useRootStore();
+
   const {
     watch,
     setValue,
@@ -25,24 +29,18 @@ export const AuthScreen = () => {
     setValue(name, val);
   };
 
-  const saveUserToken = async (token: string) => {
-    try {
-      await AsyncStorage.setItem('@token', token);
-    } catch (e) {
-      console.log('ERR', e);
-    }
-  };
-
   const sendData = (data: any) => {
-    if (data.password.length > 5) {
-      saveUserToken('TOKENASDASD');
-    }
+    authStore.login(data);
   };
 
   useEffect(() => {
     register(EAuthForm.USERNAME, {required: true});
     register(EAuthForm.PASSWORD, {required: true, minLength: 6});
   }, []);
+
+  if (authStore.loader) {
+    return <LoaderFlex />;
+  }
 
   return (
     <View style={styles.container}>
@@ -73,7 +71,7 @@ export const AuthScreen = () => {
       </View>
     </View>
   );
-};
+});
 
 export const styles = StyleSheet.create({
   container: {
