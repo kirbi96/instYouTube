@@ -1,4 +1,4 @@
-import {IHistory} from '../types/HistoryTypes';
+import {IHistory} from './HistoryTypes';
 
 export class HistoryHelper {
   static getHistory = (history: IHistory[]): IHistory[] => {

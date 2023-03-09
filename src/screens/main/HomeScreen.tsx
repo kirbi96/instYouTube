@@ -14,8 +14,8 @@ import {Colors} from '../../styles/Colors';
 import {TextHelper} from '../../helpers/TextHelper';
 import {PostCard} from '../../components/PostCard';
 import {HistoryData} from '../../modules/history/HistoryData';
-import {HistoryHelper} from '../../helpers/HistoryHelper';
-import {IHistory} from '../../types/HistoryTypes';
+import {HistoryHelper} from '../../modules/history/HistoryHelper';
+import {IHistory} from '../../modules/history/HistoryTypes';
 
 export const HomeScreen = () => {
   return (
